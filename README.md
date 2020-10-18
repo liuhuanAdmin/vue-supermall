@@ -18,5 +18,5 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-新项目：
-划分目录结构
+新项目:
+1:划分项目结构
