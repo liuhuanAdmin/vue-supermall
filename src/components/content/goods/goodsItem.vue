@@ -1,6 +1,6 @@
 <template>
-  <div class="goods-item">
-    <img :src="goodsItem.show.img" alt="">
+  <div class="goods-item" @click="goodsItemclick">
+    <img :src="goodsItem.show.img" alt="" @load="imgload">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{'￥'+goodsItem.price}}</span>
@@ -19,6 +19,22 @@ name: "goodsItem",
         return {}
       }
     }
+  },
+  methods: {
+      /*点击商品item进入详情页*/
+    goodsItemclick() {
+      console.log("进入详情页");/*动态路由传递参数*/
+      this.$router.push({
+        path: '/goodsdetail',
+        query: {
+          iid: this.goodsItem.iid
+        }
+      })
+    },
+    imgload() {
+      /*console.log('11111')*/
+      this.$bus.$emit('imgItemLoad') /*发送事件总线*/
+    },
   }
 }
 </script>

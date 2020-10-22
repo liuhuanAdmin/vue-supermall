@@ -5,7 +5,6 @@
     <div :style="activesty"><slot  name="item-text"></slot></div>
   </div>
 </template>
-
 <script>
 export default {
 name: "tab-bar-item",
@@ -33,7 +32,7 @@ name: "tab-bar-item",
   methods:{
     itemclick(){
       //点击导航栏做跳转功能 $route是当前活跃的路由对象 $router 可以使用history改变前端路径
-      this.$router.push(this.path)
+      this.$router.replace(this.path)
     }
   },
 }

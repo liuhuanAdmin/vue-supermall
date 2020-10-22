@@ -5,6 +5,7 @@ const Home = ()=>import('@/views/home/home')
 const Category = ()=>import('@/views/category/category')
 const Shopping = ()=>import('@/views/shopping/shopping')
 const Profile = ()=>import('@/views/profile/profile')
+const GoodsDetail = ()=>import('@/views/detail/GoodsDetail')
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,6 +29,11 @@ const routes = [
     path: '/profile',
     component: Profile
   },
+  {
+    path: '/goodsdetail',
+    component: GoodsDetail
+  },
+
 
 ]
 
